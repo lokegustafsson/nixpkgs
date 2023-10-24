@@ -298,6 +298,34 @@ rec {
   };
 
   #
+  # UEFI
+  #
+
+  x86_64-unknown-windows-msvc = {
+    config = "x86_64-unknown-windows-msvc";
+    rustc.config = "x86_64-unknown-uefi";
+    linker = "lld";
+    useLLVM = true;
+    libc = null;
+  };
+
+  i686-unknown-windows-msvc = {
+    config = "i686-unknown-windows-msvc";
+    rustc.config = "i686-unknown-uefi";
+    linker = "lld";
+    useLLVM = true;
+    libc = null;
+  };
+
+  aarch64-unknown-windows-msvc = {
+    config = "aarch64-unknown-windows-msvc";
+    rustc.config = "aarch64-unknown-uefi";
+    linker = "lld";
+    useLLVM = true;
+    libc = null;
+  };
+
+  #
   # Windows
   #
 
